@@ -1,1 +1,1 @@
-# go-coding-challenges
+# coding-challenges
