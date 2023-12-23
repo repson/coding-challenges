@@ -55,7 +55,7 @@ When you are done, set the TTL option on the sending socket to one and send a me
 
 % cctraceroute dns.google.com
 traceroute to dns.google.com (8.8.4.4), 64 hops max, 32 byte packets
-1  192.168.68.1 
+1  192.168.68.1
 
 Don’t forget the IP addresses you see might not match mine.
 Step 3
@@ -74,13 +74,13 @@ That will look like this (again the number of hops and the IP addresses will var
 
 % cctraceroute dns.google.com
 traceroute to dns.google.com (8.8.4.4), 64 hops max, 32 byte packets
-1  192.168.68.1 (192.168.68.1) 
-2  broadband (192.168.1.1) 
+1  192.168.68.1 (192.168.68.1)
+2  broadband (192.168.1.1)
 3  *  * *
-4  63.130.172.45 (63.130.172.45) 
-5  72.14.216.236 (72.14.216.236) 
+4  63.130.172.45 (63.130.172.45)
+5  72.14.216.236 (72.14.216.236)
 6  *  * *
-7  dns.google (8.8.4.4) 
+7  dns.google (8.8.4.4)
 
 Step 5
 

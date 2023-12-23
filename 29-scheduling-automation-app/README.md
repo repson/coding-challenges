@@ -46,9 +46,3 @@ Step 5
 In this step your goal is to create an event in the calendar, you should include the list of attendees so they also get an invite sent to them. This will require you to ask the person booking the event for their name and email address. You will find Section 5.3.2 of the RFC useful.
 
 If you want to take this even further check out the cal.com GitHub Repo and consider contributing a bug fix or extending the functionality. They currently have a job open and offer a paid bounty for some of the open source contributions - see here.
-
-Other ways I can help you:
-
-    Management Never Listens To Me - How to Persuade Them To Take On Your Ideas a cohort based course running from the 12th to the 19th October that will help you bring your best ideas to your boss and give them everything they need to say yes!
-
-    Coding Challenges Live - Become a Better Software Developer by Building Your Own Redis Server a cohort based course that runs over 4 weeks taking you through the Redis Coding Challenge with my support.
