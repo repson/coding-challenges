@@ -20,9 +20,9 @@ Step 1
 
 In this step your goal is to handle four simple expressions:
 
-1 + 2 
-2 - 1 
-2 * 3 
+1 + 2
+2 - 1
+2 * 3
 3 / 2
 
 You’ll need to handle these as input and return the correct answer. Don’t forget to consider the difference between integers and floating points as well as the potentially invalid input.
