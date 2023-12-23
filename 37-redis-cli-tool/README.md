@@ -8,9 +8,11 @@ When I recently released the course Become a Better Software Developer by Buildi
 BTW, I’m currently porting the course to Go, signup here for the waitlist if you’re interested, everyone on the waitlist will be offered it first at a discount price.
 
 Ad: Reach 60,000+ software engineers every week by sponsoring the Coding Challenges newsletter.
+
 The Challenge - Building A Redis CLI Tool
 
 In this Coding Challenge we’re going to build a CLI tool to send commands to a Redis server, it’s a nice challenge to complement the build your own Redis challenge. If you’re not familiar with Redis you can learn all about it in that challenge.
+
 Step Zero
 
 In this introductory step your task is to set up your environment up ready to begin developing and testing your solution.
@@ -20,6 +22,7 @@ Choose your target platform, set up your editor and programming language of choi
 Once you’ve done that you might like to install Redis itself so you can use it to test your CLI tool implementation against.
 
 Share Coding Challenges
+
 Step 1
 
 In this step your goal is to build the functionality to serialise and de-serialise Redis Serialisation Protocol (RESP) messages. This is the protocol used to communicate with a Redis Server. Throughout this step you may wish to refer to the RESP protocol specification.
@@ -65,6 +68,7 @@ Now that we have the basics of the protocol, your challenge is to write the code
     "+hello world\r\n”
 
 Don’t forget to include some invalid test cases too.
+
 Step 2
 
 In this step your goal is to build a simple tool that, when run, will open a network connection to a Redis server running on localhost:6379, send the PING command to it, wait for a response, decode and print the response.
@@ -98,6 +102,7 @@ value
 127.0.0.1:6379>quit
 
 The quit command should not be sent to the server, but should exit the program, closing the network connection to the server.
+
 Step 4
 
 In this step your goal is to support the help command and provide help for each of the commands Redis supports. You’re looking to make this work:
@@ -116,9 +121,10 @@ localhost:6379> help set
   group: string
 
 localhost:6379>quit
-% 
+%
 
 You can find the content to use for the help in the Redis GitHub - redis/src/commands as a set of JSON files.
+
 Step 5
 
 In this step your goal is to support hints for the commands. If you look at the actual Redis CLI tool you’ll see (as shown in the screenshot below) that it offers a hint as to the usage of the command as you type it:

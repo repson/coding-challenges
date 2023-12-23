@@ -4,6 +4,7 @@ John Crickett
 May 20, 2023
 
 I’m a big fan of the Unix Philosophy and the command line tools it has spawned. By chaining them together you can create complex and powerful software from simple building blocks. That’s a great model to follow for the functions and modules in the software you write and the components you use in the systems you build as a software developer.
+
 The Challenge - Building uniq
 
 Let’s check out the man page on uniq to find out what it does:
@@ -17,6 +18,7 @@ Like most programming languages we’re zero indexed!
 For this step, I’ll leave you to setup your IDE / editor of choice and programming language of choice. After that here’s what I’d like you to do to be ready to test your solution.
 
 Download the test data from my dropbox here and unzip it.
+
 Step 1
 
 In this step your goal is to read an input file and and handle the default behaviour, which is to remove duplicate adjacent lines.
@@ -77,7 +79,7 @@ Step 4
 
 In this step your goal is to implement the repeated option: -d or --repeated. When this option is specified your program should output only repeated lines.
 
-% uniq -d test.txt 
+% uniq -d test.txt
 line2
 
 Try the command uniq -d countries.txt to find out which countries cuisine my kids love!
@@ -95,9 +97,11 @@ Step 6
 In this step your goal is to support a combination of command line options, i.e. uniq -c -d countries.txt Each of the repeated countries should appear twice.
 
 Once you’ve done that - congratulations you’ve built a lite version of the unix command line tool uniq!
+
 Share Your Solutions!
 
 If you think your solution is an example of the developers can learn from please share it, put it on GitHub, GitLab or elsewhere. Then let me know - ping me a message on the Discord Server or in the Coding Challenges Sub Reddit, via Twitter or LinkedIn or just post about it there and tag me.
+
 Request for Feedback
 
 I’m writing these challenges to help you develop your skills as a software engineer based on how I’ve approached my own personal learning and development. What works for me, might not be the best way for you - so if you have suggestions for how I can make these challenges more useful to you and others, please get in touch and let me know. All feedback greatly appreciated.

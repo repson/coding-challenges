@@ -50,11 +50,13 @@ However, asymmetric routes and network congestion can cause the accuracy to decr
 The protocol is usually described in terms of a client–server model, but can also be used in peer-to-peer relationships. Clients and servers using NTP send and receive timestamps as UDP packets on port 123.
 
 The full protocol is defined in the NTP RFC which is RFC 5905.
+
 Step Zero
 
 In this step you’re going to set your environment up ready to begin developing and testing your NTP client solution.
 
 I’ll leave you to setup your editor and programming language of choice. I’d encourage you to pick a tech stack that you’re comfortable doing network programming in.
+
 Step 1
 
 In this step your goal is to send a request to an NTP server and receive the response back. You’ll need to contact the NTP server on port 123. The message you’ll need to send is defined in the RFC under section 7 on page 19. Take care to understand which fields you set for the outgoing message.
@@ -66,11 +68,13 @@ A server synchronised to a stratum n server is considered to be a stratum n + 1 
 For this challenge you can find a list of time servers you can use here or you can use one from the NTP Pool Project.
 
 The packet you get back will have the same structure as packet you sent, check that the first three fields are correct then proceed to Step 2.
+
 Step 2
 
 In this step your goal is to decode the response from the NTP server and print out the four timestamps in the packet.
 
 The obvious test here is to ensure they are all within a few milliseconds of each other (assuming your network latency to the NTP server you picked is reasonable). Test it with ping if you are unsure.
+
 Step 3
 
 In this step your goal is to calculate the offset and the round trip delay. A typical NTP client regularly polls one or more NTP servers. The client must compute its time offset and round-trip delay.
@@ -90,6 +94,7 @@ Where:
 
 The round-trip delay delta is calculated as:
 \(delta = {(t_3 - t_0 ) - ( t_2- t_1 )} \)
+
 Step 4
 
 In this step your goal is to set the system clock based on the NTP calculated time. You’ll need to dig in to how to set the system time for your operating system from your programming language.

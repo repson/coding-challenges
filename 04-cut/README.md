@@ -13,6 +13,7 @@ The Unix command line tools are a great metaphor for good software engineering a
 Following these philosophies has made the simple unix command line tools some of the most widely used software engineering tools which can be chained together to create far more complex and powerful set of tools that you’d expect.
 
 You can read more about the Unix Philosophy in the excellent book The Art of Unix Programming.
+
 The Challenge - Building cut
 
 The functional requirements for cut are concisely described by it’s man page - give it a go in your local terminal now:
@@ -25,6 +26,7 @@ Step Zero
 In this introductory step you’re going to set your environment up ready to begin developing and testing your solution.
 
 I’ll leave you to setup your IDE / editor of choice and programming language of choice. After that here’s what I’d like you to do to be ready to test your solution, download the text from my Dropbox.
+
 Step 1
 
 In this step your goal is to implement a simple version of cut that will open the provided tab separated file and print out the second field (-f2) from each line. The result should look something like this:

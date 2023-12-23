@@ -52,6 +52,7 @@ Click on the Create app button or link to do so:
 Enter some sensible values for the app:
 
 Then click on the button to create it!
+
 Step 1
 
 In this step your goal is to authenticate the user of your client. Spotify offer several options for this. You’ll find details of how to do this on in their documentation, for a Single Page Web App, they recommend using the authorisation code with PKCE.
@@ -59,6 +60,7 @@ In this step your goal is to authenticate the user of your client. Spotify offer
 Once you’ve authenticated check you can access the user’s profile by calling the /me endpoint. Check the documentation for the User Profile Endpoint to see what data is returned and how to use the authorisation token.
 
 Check you’re getting back the id field you expect to verify that you’ve authenticated correctly.
+
 Step 2
 
 In this step your goal is to fetch the authenticated users playlists and display them to the user.
@@ -66,6 +68,7 @@ In this step your goal is to fetch the authenticated users playlists and display
 To do this you’re going to use the Get Playlist API. I then chose to render out the title of the playlist and the provided image, here’s what that looked like for one of mine.
 
 If you’re a fan of the band, they performed great in Manchester on this tour! If you’re not, hopefully you’re seeing a playlist of yours that is more to your taste.
+
 Step 3
 
 In this step your goal is to allow the user to select a playlist then play and pause that playlist. To do this you will need to add the Web Playback SDK (assuming you’re building a frontend application).
@@ -73,6 +76,7 @@ In this step your goal is to allow the user to select a playlist then play and p
 You will need to ensure you have the right scopes set for your authentication, once you done that you should be able to view a player that will look something like this:
 
 If you see an error message that “Instance not active. Transfer your playback using your Spotify app” you will need to check the Spotify App and switch device to the Wb Playback SDK.
+
 Step 4
 
 In this step get the device_id of your client and use the Player API to transfer playback automatically to your client.
@@ -87,9 +91,11 @@ Refer a friend
 Past Challenges and Community
 
 Don’t forget you can find all the past challenges on the Coding Challenges website and there is a Discord Server and Coding Challenges Sub Reddit, if you want to discuss them.
+
 Share Your Solutions!
 
 If you think your solution is an example of the developers can learn from please share it, put it on GitHub, GitLab or elsewhere. Then let me know - ping me a message on the Discord Server or in the Coding Challenges Sub Reddit, via Twitter or LinkedIn or just post about it there and tag me.
+
 Request for Feedback
 
 I’m writing these challenges to help you develop your skills as a software engineer based on how I’ve approached my own personal learning and development. What works for me, might not be the best way for you - so if you have suggestions for how I can make these challenges more useful to you and others, please get in touch and let me know. All feedback greatly appreciated.

@@ -8,14 +8,17 @@ At its core a web server is actually quite simple. It’s a server that listens 
 HTTP like many early Unix and Internet protocols is text based, so human readable. The original HTTP specification from 1991, is short and sweet. It originally didn’t even have a version number! But was later renamed HTTP/0.9, to differentiate it from HTTP/1.0. The HTTP/1.0 specification seems to be lost in the mists of time.
 
 The first full formal HTTP specification is HTTP/1.1 - also known as - RFC2616 from 1999. You can dig through all the HTTP standards on the W3C website.
+
 The Challenge - Building a Basic Web Server
 
 Early web servers were very basic, as per the HTTP/0.9 specification they supported just a GET request and returned the document specified. The error messages were human readable HTML with no way to distinguish success from failure.
 
 We’re going to go a little beyond that and support a small subset of HTTP/1.1.
+
 Step Zero
 
 In this step you decide which programming language and IDE you’re going to use and you get yourself setup with a nice new ‘webserver’ project. I built mine in Rust.
+
 Step 1
 
 In this step your goal is to create a basic HTTP server that listens on port 80 and can handle a single TCP connection at a time. For all requests we’ll return some text that describes the requested path.

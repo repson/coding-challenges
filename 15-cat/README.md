@@ -12,6 +12,7 @@ The Unix command line tools are a great metaphor for good software engineering a
     Design programs to be connected to other programs - each tool can be easily connected to other tools to create incredibly powerful compositions.
 
 Following these philosophies has made the simple Unix command line tools some of the most widely used software engineering tools - allowing us to create very complex text data processing pipelines from simple command line tools.
+
 Coding Challenges Live - A Cohort Training Course
 
 Would you like to tackle one of these coding challenges with a cohort of other software engineers - and me?
@@ -106,6 +107,7 @@ In this step your goal is to number the lines as they’re printed out, that sho
 3  "Strive not to be a success, but rather to be of value."
 
 Free free not to use head, I’m just keeping the example short.
+
 Step 5
 
 In this step your goal is to number lines, both including and excluding non-blank lines, here’s a couple of test cases:

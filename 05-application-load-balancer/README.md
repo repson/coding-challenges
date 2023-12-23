@@ -104,9 +104,9 @@ Round robin is the simplest form of static load balancing. In a nutshell it work
 
 So if we have three servers and six requests they get routed as follows:
 
-Server Requests 
-  A     1, 4 
-  B     2, 5 
+Server Requests
+  A     1, 4
+  B     2, 5
   C     3, 6
 
 You can read more about load balancing algorithms on the Coding Challenges website.

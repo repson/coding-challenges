@@ -18,12 +18,14 @@ The IRC protocol also supports groups of servers being connected together and sh
     RFC2813 Internet Relay Chat: Server Protocol. This document describes the “server-server” protocol used between IRC servers in the same network.
 
 We will be implementing a subset of RFC2812 to create a simple IRC client.
+
 The Challenge - Building Your Own IRC Client
 
 This challenge then is to build a simple IRC chat client, you could build that as a desktop application with a GUI (the typical example of this is mIRC) a CLI application, or as a web based application, i.e. freenode offers a web based IRC client here: https://webchat.freenode.net/ which you’ll find useful for testing - you can connect and join a channel then ‘talk’ to your own client.
 Step Zero
 
 Please set up your IDE / editor and programming language of choice and proceed directly to Step 1 once you’re ready.
+
 Step 1
 
 In this step your goal is to create your IRC client and have it start and connect to an IRC server. Your client will connect to an IRC server using TCP/IP. For this challenge we will use freenode, so the host will be irc.freenode.net and the port will be 6667.
@@ -36,6 +38,7 @@ USER guest 0 * :Coding Challenges Client
 Feel free to replace CCClient and Coding Challenges Client with you own nickname and ‘real’ name respectively.
 
 You should then read back the messages from the server and for now I suggest you print them out. It will help you begin to understand the IRC protocol.
+
 Step 2
 
 In this step your goals are to parse the welcome messages from the server and to handle PING messages from the server. If your client doesn’t respond to pings the server will shutdown the connection.
@@ -53,6 +56,7 @@ The second is a NOTICE message, that looks like this:
 This is again the prefix and server followed by the command NOTICE, which is followed by it’s target and the text of the notice after the second prefix.
 
 If you have successfully connected you should see the freenode message of the day and your client should stay connected and be receiving and responding to PING messages from the server.
+
 Step 3
 
 In this step your goal is to handle joining and leaving a channel.
@@ -79,6 +83,7 @@ For /part it will be: PART #cc assuming you were on the channel #cc, otherwise p
 You will then need to handle the responses back from the server. You can refer to section five of the RFC to understand the response codes.
 
 You will want to track what channel the client has joined/left within your client. For this challenge we are going to assume the user only joins one channel at a time, but most full blown IRC clients allow users to join multiple channels.
+
 Step 4
 
 In this step your goal is to handle nick changes. The user command is usually /nick NewNickname for example, /nick JohnC and the server will respond:
@@ -92,6 +97,7 @@ You will also get a similar message when another user on a channel that you are 
 Your client should present the user with a relevant human translation of this change, i.e.:
 
 JohnC is now known as CCTest2
+
 Step 5
 
 In this step your goal is to send and receive messages on a channel. Usually anything the user enters that isn’t prefixed with ‘/’ is chat to be sent to the current channel. So take some user input and send it to their current channel. If they’re not on a channel don’t send it and report an error.
@@ -113,6 +119,7 @@ Normally a client will parse that and then present the user with a message more 
 JohnC: Hi There!
 
 Once you’ve done that, on to Step 6.
+
 Step 6
 
 In this step your goal is to leave IRC politely. The usual user command to quit IRC is /quit message where the message is optional.
@@ -130,5 +137,7 @@ To tell a server that your user is leaving send the message:
 QUIT: message
 
 Implement that and test your client works and then pat yourself on the back, you’ve built a lightweight IRC client.
+
 Going Further
+
 You can take this challenge further by implementing the rest of the IRC Client-Server protocol as specified in the RFC.

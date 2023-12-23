@@ -34,11 +34,13 @@ Trace Route is described on it’s man page like this:
     The Internet is a large and complex aggregation of network hardware, connected together by gateways.  Tracking the route one's packets follow (or finding the miscreant gateway that's discarding your packets) can be difficult. traceroute utilizes the IP protocol `time to live' field and attempts to elicit an ICMP TIME_EXCEEDED response from each gateway along the path to some host.
 
 So in this challenge we’re going to build a command line tool that does just that.
+
 Step Zero
 
 Like all good programming languages we’re zero indexed!
 
 For this step, I’ll leave you to setup your IDE / editor of choice and programming language of choice.
+
 Step 1
 
 In this step your goal is to create a simple command line program that will accept one argument, the host name and will print out the first line of traceroute output. That should look something like this:
@@ -47,6 +49,7 @@ In this step your goal is to create a simple command line program that will acce
 traceroute to [dns.google.com](<http://dns.google.com/>) (8.8.4.4), 64 hops max, 32 byte packets
 
 You can pick your own number of max hops. The packet you send is arbitrary, so I’m using a simple text string: 'codingchallenges.fyi trace route’.
+
 Step 2
 
 In this step your goal is to create the sockets we need to build trace route. That is we need a socket that we can use to send packets out and a socket that we will receive the responses on. We will use two sockets, one to send a UDP message and one to receive the ICMP message to let us know the message we sent timed out. By default traceroute uses destination ports in the range 33434 to 33534, you should too.
@@ -58,6 +61,7 @@ traceroute to dns.google.com (8.8.4.4), 64 hops max, 32 byte packets
 1  192.168.68.1
 
 Don’t forget the IP addresses you see might not match mine.
+
 Step 3
 
 In this step your goal is to print out the hostname of the first step if there is one. If not print the IP address again. That should then look like this:
@@ -101,11 +105,13 @@ Congratulations you’ve built a simple traceroute tool!
 Past Challenges and Community
 
 Don’t forget you can find all the past challenges on the Coding Challenges website and there is a Discord Server and Coding Challenges Sub Reddit, if you want to discuss them.
+
 Share Your Solutions!
 
 If you think your solution is an example of the developers can learn from please share it, put it on GitHub, GitLab or elsewhere. Then let me know - ping me a message on the Discord Server or in the Coding Challenges Sub Reddit, via Twitter or LinkedIn or just post about it there and tag me.
 
 Thanks for reading Coding Challenges! Subscribe for free to receive new posts and support my work.
+
 Request for Feedback
 
 I’m writing these challenges to help you develop your skills as a software engineer based on how I’ve approached my own personal learning and development. What works for me, might not be the best way for you - so if you have suggestions for how I can make these challenges more useful to you and others, please get in touch and let me know. All feedback greatly appreciated.

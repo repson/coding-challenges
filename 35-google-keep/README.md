@@ -8,6 +8,7 @@ Ad: Promote your business to 60,000+ software engineer by sponsoring this newsle
 Google Keep is an unassuming note taking app from Google. It’s the only app that has been on every smartphone I’ve ever owned. It first appeared in 2013 and hasn’t - to the best of my recollection - changed much since then. Or maybe I’ve just ignored the features apart from text notes 🙂
 
 It’s simplicity and the fact that it just works, is the reason it’s been on every smartphone I’ve ever used, and that I use the web version regularly. I know that my notes will be accessible wherever I use my Google account.
+
 The Challenge - Building Your Own Version Of Google Keep
 
 For this challenge you’re going to build a clone of what I regard as the killer functionality of Google Keep - being a simple to use distributed note taking tool with a mobile and web UI.

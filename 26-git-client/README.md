@@ -20,6 +20,7 @@ As a software engineer, coder, programmer, or whatever you refer to yourself as,
 If you’ve not come across git before, I wrote about it recently on LinkedIn here, where I also explained why it’s called git!
 
 This challenge is going to have you build a git client that can: create a new repository, add some commits and push them to GitHub.
+
 Step Zero
 
 This is software engineering so we’re zero-indexed and for this step you’re going to set your environment up ready to begin developing and testing your solution.
@@ -27,6 +28,7 @@ This is software engineering so we’re zero-indexed and for this step you’re 
 I’ll leave you to setup your IDE / editor of choice and programming language of choice.
 
 Once you’ve done that I suggest taking some time to read through the Internals section of the Git SCM website. It’ll take you through the steps needed to manipulate a git repository. If you want to really dig into git you can check out the git source code on GitHub.
+
 Step 1
 
 In this step your goal is to create a basic git client that can initialise an empty git repository. An empty git repo is simply the .git directory with a few files in it, these are:
@@ -54,6 +56,7 @@ initialized empty repository: test
 On branch master No commits yet nothing to commit (create/copy files and use "git add" to track)
 
 Don’t forget to check if there is already a git repository initialised in the directory.
+
 Step 2
 
 In this step your goal is to add one or more files to the index.
@@ -74,6 +77,7 @@ Changes to be committed:
 	new file:   hello-coding-challenges.txt
 
 Note that I’ve used git itself to test that the file has successfully been added to the index.
+
 Step 3
 
 In this step your goal is to support the status command. Having used git status to see that we’ve added a file to the index, it would be nice to be able to use our own status command.
@@ -94,6 +98,7 @@ Untracked files:
 You can determine the current branch from the file .git/HEAD
 
 I’d suggest also adding and deleting files to check that your status works completely.
+
 Step 4
 
 In this step your goal is to be able to commit the staged files. To create a commit, read through the Tree Objects section of the Git Internals Git Objects documentation.
@@ -111,7 +116,7 @@ committed to master: 8e0ed1fd59559543c9e8612bdc5bd3558abc73f9
 % git log
 commit 8e0ed1fd59559543c9e8612bdc5bd3558abc73f9 (HEAD -> master)
 Author: John Crickett [3667898+JohnCrickett@users.noreply.github.com](<mailto:3667898+JohnCrickett@users.noreply.github.com>)
-Date:   Wed Sep 6 19:36:00 2023 +0000 
+Date:   Wed Sep 6 19:36:00 2023 +0000
 	Add Hello CC
 
 Step 5
@@ -150,9 +155,11 @@ Share
 Past Challenges and Community
 
 Don’t forget you can find all the past challenges on the Coding Challenges website and there is a Discord Server and Coding Challenges Sub Reddit, if you want to discuss them.
+
 Share Your Solutions!
 
 If you think your solution is an example of the developers can learn from please share it, put it on GitHub, GitLab or elsewhere. Then let me know - ping me a message on the Discord Server or in the Coding Challenges Sub Reddit, via Twitter or LinkedIn or just post about it there and tag me.
+
 Request for Feedback
 
 I’m writing these challenges to help you develop your skills as a software engineer based on how I’ve approached my own personal learning and development. What works for me, might not be the best way for you - so if you have suggestions for how I can make these challenges more useful to you and others, please get in touch and let me know. All feedback greatly appreciated.

@@ -97,7 +97,6 @@ OK
 
 We’ll ignore all the expiry options that Redis supports for now. Once a key has been set you’ll want to implement and test the related command GET.
 
-
 % redis-cli get Name
 "John"
 
@@ -159,8 +158,8 @@ I suggest you install Redis and run a server locally and see how that performs, 
 
 For example, here’s how Redis performs on my Macbook:
 
-redis-benchmark -t set,get, -n 100000 -q 
-SET: 110497.24 requests per second, p50=0.215 msec 
+redis-benchmark -t set,get, -n 100000 -q
+SET: 110497.24 requests per second, p50=0.215 msec
 GET: 117647.05 requests per second, p50=0.215 msec
 
 And here’s how my Rust implementation does:

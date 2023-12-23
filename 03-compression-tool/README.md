@@ -10,6 +10,7 @@ I picked C and decided to implement a few of the data structures and algorithms 
 Despite the name the book covers a lot more than just graphics programming - it really digs into understanding the architecture of a computer and how that has an impact on the performance of your code. For example when I re-wrote of part the compression tool that this challenge is about to take into account the hard disk buffer size (back before SSDs) the performance on a one megabyte file jumped 100x!
 
 These days the equivalent would be understand the cache hierarchies in a modern CPU and how programming with an awareness of them can radically change the performance of your code. Scott Meyers did great talk that digs into this. You can find the slides on his website here.
+
 The Challenge - Building A Huffman Encoder/Decoder
 
 In the early 1950s David Huffman developed an algorithm to find the optimal prefix code that can be used for lossless data compression.
@@ -93,6 +94,7 @@ Even though this is only the first coding challenge I’ve already been asked to
 If you think your solution is an example of the developers can learn from please share it, put it on GitHub, GitLab or elsewhere. Then let me know - ping me a message via Twitter or LinkedIn or just post about it there and tag me.
 
 I’ll take a look at every solution and I’ll mention the best solution in the follow week’s newsletter.
+
 Request for Feedback
 
 I’m writing these challenges to help you develop your skills as a software engineer based on how I’ve approached my own personal learning and development. What works for me, might not be the best way for you - so if you have suggestions for how I can make these challenges more useful to you and others, please get in touch and let me know. All feedback greatly appreciated.

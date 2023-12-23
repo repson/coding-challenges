@@ -26,6 +26,7 @@ man sort
 The TL/DR version is: the sort utility sorts text files by lines.  A line is a record separated from the subsequent record by a newline.
 
 We’re going to ignore binary files for this challenge, though I’d encourage you to consider extending your implementation to support them once you’ve finished the challenge.
+
 Step Zero
 
 Like all good software engineering we’re zero indexed! In this step you’re going to set your environment up ready to begin developing and testing your solution.
@@ -39,6 +40,7 @@ Then we will create a list of all the words in the file and save it as words.txt
 % tr -s '[[:punct:][:space:]]' '\\n' < test.txt |sed '/^[0-9]/d' > words.txt
 
 Please note how powerful the unix command line tools are. If you’re not familiar with them you’re missing out on some incredibly power tools that can do a lot data munging. It’s a great topic for self study.
+
 Step 1
 
 In this step your goal is to implement the essence of the sort program, we want to be able to run sort and have it open a file and output the lines in the file sorted lexicographically.
@@ -66,6 +68,7 @@ AND
 You can achieve this whilst sorting, before sorting or after sorting the list. Think about the algorithms and data structures involved and the trade-offs you’ll be making in terms of computational complexity, space complexity and extensibility of the software.
 
 Hint: just like writing code professionally, sometimes it pays to check you have all the known requirements before you start coding.
+
 Step 3
 
 In this step your goal is to allow the user of your sort program to select which sort algorithm to use. Checking man sort, we see that the standard Unix version offers radix sort, merge sort, quicksort and heapsort.
@@ -73,6 +76,7 @@ In this step your goal is to allow the user of your sort program to select which
 Implement as many of the different sort algorithms as you like and think carefully about how they interact with the -u flag.
 
 There are thousands of words in our test text, so you might like to implement some unit testing / using the different sorting algorithms as a way to learn or practice test-drive development using your stacks testing library.
+
 Step 4
 
 In this step your goal is to implement random sort. Random sort is defined by the man page of sort as:
@@ -92,6 +96,7 @@ awful
 Share Your Solutions!
 
 If you think your solution is an example of the developers can learn from please share it, put it on GitHub, GitLab or elsewhere. Then let me know - ping me a message via Twitter or LinkedIn or just post about it there and tag me.
+
 Request for Feedback
 
 I’m writing these challenges to help you develop your skills as a software engineer based on how I’ve approached my own personal learning and development. What works for me, might not be the best way for you - so if you have suggestions for how I can make these challenges more useful to you and others, please get in touch and let me know. All feedback greatly appreciated.

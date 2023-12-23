@@ -74,6 +74,7 @@ Once you have implemented that you can use Postman to test it. There is a blog p
 I configured a test to hit the limited API endpoint with 10 Virtual Users, as you can see that results in no errors initially, (the bucket had ten tokens, then after a second 90% of the requests fail as there are 10 users trying to access the API, but only one token being added per second.
 
 Once that works, on to Step 3.
+
 Step 3
 
 In this step your goal is to fixed window counter algorithm. The fixed window counter algorithm works like this:
@@ -85,6 +86,7 @@ In this step your goal is to fixed window counter algorithm. The fixed window co
     The windows are typically defined by the floor of the current timestamp, so 17:47:13 with a 60 second window length, would be in the 17:47:00 window.
 
 Again you can use Postman to test this, I used 10 Virtual Users with a 60 second window and 60 request threshold. You can see the distinct pattern of requests succeeding just after the window changes followed by a number of rejections.
+
 Step 4
 
 In this step your goal is to implement the sliding window log algorithm. The sliding log algorithm involves:
@@ -102,6 +104,7 @@ The advantage of this algorithm is that it does not suffer from the boundary con
 The disadvantage is that it needs to store an unlimited number of logs for every request. As the size of the logs grows it can become expensive to compute the summation over all the log entries. As a result it does not scale well to handle large bursts of traffic or denial of service attacks.
 
 I’ll leave you to define your own test for this one as designing tests is also a key skill to learn as a software engineer. It would be a great example to experiment with TDD on if you’re not already doing that.
+
 Step 5
 
 In this step your goal is to implement the sliding window counter algorithm. It is a hybrid approach that combines the low processing cost of the fixed window algorithm, and the improved boundary conditions of the sliding log algorithm.
@@ -113,6 +116,7 @@ In this step your goal is to implement the sliding window counter algorithm. It 
 As this algorithm stores relatively little data it suitable for scale, including scaling across distributed clusters.
 
 Again the final challenge of this step is to design a test for your rate limit calculation.
+
 Step 6
 
 In this step your goal is to extend your sliding window counter rate limiting to work across multiple servers. You can use a database like Redis to store the count for the requests and have each server update the database so the rate limiting is shared across two or more servers.
@@ -127,9 +131,11 @@ Share
 Past Challenges and Community
 
 Don’t forget you can find all the past challenges on the Coding Challenges website and there is a Discord Server and Coding Challenges Sub Reddit, if you want to discuss them.
+
 Share Your Solutions!
 
 If you think your solution is an example of the developers can learn from please share it, put it on GitHub, GitLab or elsewhere. Then let me know - ping me a message on the Discord Server or in the Coding Challenges Sub Reddit, via Twitter or LinkedIn or just post about it there and tag me.
+
 Request for Feedback
 
 I’m writing these challenges to help you develop your skills as a software engineer based on how I’ve approached my own personal learning and development. What works for me, might not be the best way for you - so if you have suggestions for how I can make these challenges more useful to you and others, please get in touch and let me know. All feedback greatly appreciated.

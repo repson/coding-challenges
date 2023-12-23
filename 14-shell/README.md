@@ -30,9 +30,11 @@ interactive login shell and as a shell script command
 processor.
 
 We’re going to build our shell, which will enable us to run commands on our operating system.
+
 Step Zero
 
 Please set up your IDE / editor and programming language of choice and proceed directly to step 1 once you’re ready. I’ve called my project ccsh for Coding Challenges Shell.
+
 Step 1
 
 In this step your goal is to create the simples possible command line shell. That’s a program that starts up waits for the user to type in a command. To make it easier to see which shell is running I’ve given my shell a unique prompt: ccsh>.
@@ -44,7 +46,7 @@ For example here’s what happens when I run my ccsh:
 % ccsh
 ccsh> ls
 Cargo.lock      Cargo.toml      src             target
-% 
+%
 
 My shell outputs the prompt ccsh>. I have then run the command ls and it has output the results below the prompt. In this case you see the files from my Rust implementation of ccsh.
 
@@ -60,7 +62,7 @@ So to complete this step, extend your shell to accept multiple commands until th
 
 That should look something like this:
 
-% ccsh 
+% ccsh
 ccsh> ls
 Cargo.lock      Cargo.toml      src             target
 ccsh> pwd
@@ -121,7 +123,7 @@ ccsh> pwd
 ccsh> cd ..
 ccsh> pwd
 /Users/john/dev/challenge-shell/ccsh
-ccsh> exit 
+ccsh> exit
 %
 
 Step 6

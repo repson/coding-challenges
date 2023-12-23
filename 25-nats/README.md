@@ -10,9 +10,11 @@ If you want to learn more about how message brokers are used in distributed syst
 Thank you for reading Coding Challenges. If you think someone else would benefit from it, please feel free to share it.
 
 Share
+
 Step Zero
 
 In the majority of common programming languages we index arrays from the element zero onwards. Coding Challenges is the same, we start with Step 0 - setup your IDE / editor of choice and programming language of choice.
+
 Step 1
 
 In this step your goal is to parse the NATS protocol. Before jumping in it’s worth reading the NATS Protocols documentation. Then dust off your favourite telnet client and work through the Protocol Demo.
@@ -42,6 +44,7 @@ SUB FOO 1\r\n
 PUB CodingChallenge 11\r\nHello John!\r\n
 
 When you’re happy with your parser move on to Step 2.
+
 Step 2
 
 In this step your goal is to create the bones of the server, handle a client connection and respond to PING and PONG messages.
@@ -122,9 +125,11 @@ Thanks for reading Coding Challenges! Subscribe for free to receive new posts an
 Past Challenges and Community
 
 Don’t forget you can find all the past challenges on the Coding Challenges website and there is a Discord Server and Coding Challenges Sub Reddit, if you want to discuss them.
+
 Share Your Solutions!
 
 If you think your solution is an example of the developers can learn from please share it, put it on GitHub, GitLab or elsewhere. Then let me know - ping me a message on the Discord Server or in the Coding Challenges Sub Reddit, via Twitter or LinkedIn or just post about it there and tag me.
+
 Request for Feedback
 
 I’m writing these challenges to help you develop your skills as a software engineer based on how I’ve approached my own personal learning and development. What works for me, might not be the best way for you - so if you have suggestions for how I can make these challenges more useful to you and others, please get in touch and let me know. All feedback greatly appreciated.

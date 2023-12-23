@@ -96,6 +96,7 @@ That should look like this for an invalid URL:
 And like this for a valid URL:
 
 Extra points for making the bot save the newly added challenge to your local copy of the catalogue so new additions are retained when the bot is restarted.
+
 Step 5
 
 In this step your goal is to host your bot somewhere where it can run 24/7/365 as if it were a production system. No this does not count:
@@ -103,6 +104,7 @@ In this step your goal is to host your bot somewhere where it can run 24/7/365 a
 I would suggest using the AWS Free Tier, you can setup a tiny EC2 instance for free. If you’re new to AWS I suggest checking out Guille Ojeda’s guide to creating a Self-healing, Single-instance Environment with AWS EC2.
 
 You can then run your bot as a daemon, ensuring it continues to run is the terminal is closed and is automatically started on startup.
+
 Past Challenges and Community
 
 Don’t forget you can find all the past challenges on the Coding Challenges website.

@@ -10,14 +10,17 @@ In other words, domain name resolution; turning the hostname that your browser h
 To do this your browser contacts a DNS Resolver. The DNS Resolve may have the answer in it’s cache in which case it can return it immediately, if not then it will have to look it up. To look it up it contacts an authoritative name server. To do that it will first consult it’s cache for an authoritative name server and if it doesn’t have one it will contact a root name server to get one.
 
 Thanks for reading Coding Challenges! Subscribe for free to receive new posts and support my work.
+
 The Challenge - Building a DNS Resolver
 
 In this challenge we’re going build a simple DNS resolve that can resolve the IP address for a host.
+
 Step Zero
 
 In this introductory step you’re going to set your environment up ready to begin developing and testing your solution.
 
 I’ll leave you to choose your target platform, setup your editor and programming language of choice. I’d encourage you to pick a tech stack that you’re comfortable doing network programming with.
+
 Step 1
 
 In this step your goal is to build a message to be sent to a name server.
@@ -65,6 +68,7 @@ The message that you’re going to build will look like this:
 Which would give us the following (hex) 00160100000100000000000003646e7306676f6f676c6503636f6d0000010001
 
 Once you have the data structures to represent the header, question and message and the ability to convert it to a bytes string ready proceed to Step 2.
+
 Step 2
 
 In this step your goal is to send the request to a name server and dump the response out.
@@ -76,6 +80,7 @@ So create your socket and send your message to Google’s DNS server using the I
 Read back the response, which will look something like this (hex): 00168080000100020000000003646e7306676f6f676c6503636f6d0000010001c00c0001000100000214000408080808c00c0001000100000214000408080404
 
 For now just work checking that the first two bytes match the id you sent.
+
 Step 3
 
 In this step your goal is to parse the response and extract the answers from it. The response has the same structure as the request we sent but hopefully you have received some data in the answers section. The format of the answers is defined in Section 4.1.3 of the RFC.
@@ -85,6 +90,7 @@ You’ll need to parse the header, then parse the question, answer, authorities 
 When parsing the last three sections you’ll need to be aware that DNS supports some compression, you’ll find details in the RFC Section 4.1.4. Don’t forget you’ll need to re-join the sections of the name with .
 
 If you decode the message you get back from the name server you should now have the same id you send, one question, two answers and zero authorities and additionals. The answers should include the name we queried dns.google.com, a type and class of 1, a TTL greater than zero, and the IP addresses 8.8.8.8 and 8.8.4.4.
+
 Step 4
 
 In this step your goal is to be able to query one of the root name servers so you can resolve any host and domain name, not just Google’s.
@@ -113,9 +119,11 @@ Thanks for reading Coding Challenges! Subscribe for free to receive new posts an
 Past Challenges and Community
 
 Don’t forget you can find all the past challenges on the Coding Challenges website and there is a Discord Server and Coding Challenges Sub Reddit, if you want to discuss them.
+
 Share Your Solutions!
 
 If you think your solution is an example of the developers can learn from please share it, put it on GitHub, GitLab or elsewhere. Then let me know - ping me a message on the Discord Server or in the Coding Challenges Sub Reddit, via Twitter or LinkedIn or just post about it there and tag me.
+
 Request for Feedback
 
 I’m writing these challenges to help you develop your skills as a software engineer based on how I’ve approached my own personal learning and development. What works for me, might not be the best way for you - so if you have suggestions for how I can make these challenges more useful to you and others, please get in touch and let me know. All feedback greatly appreciated.

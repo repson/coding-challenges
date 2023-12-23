@@ -65,7 +65,7 @@ HTTP is a stateless protocol so there is no ‘connection’ to the server that 
 
 Once you’ve completed this step you should be able to send a request and get a response like this:
 
-% cccurl http://eu.httpbin.org/get 
+% cccurl http://eu.httpbin.org/get
 Sending request GET /get HTTP/1.1
 Host: eu.httpbin.org
 Accept: */*
@@ -81,12 +81,12 @@ Access-Control-Allow-Origin: *
 Access-Control-Allow-Credentials: true
 
 {
-  "args": {}, 
+  "args": {},
   "headers": {
-    "Accept": "*/*", 
-    "Host": "eu.httpbin.org", 
+    "Accept": "*/*",
+    "Host": "eu.httpbin.org",
     "X-Amzn-Trace-Id": "Root=1-657c62c3-26068fd12f977c810ce87090"
-  }, 
+  },
   "url": "http://eu.httpbin.org/get"
 }
 
@@ -95,14 +95,14 @@ Step 3
 
 In this step your goal is to handle the headers (don’t print them out if verbose is not enabled) and only show them if the verbose flag is enabled. In other words we’re going to tweak out code to look like this:
 
-% cccurl http://eu.httpbin.org:80/get 
+% cccurl http://eu.httpbin.org:80/get
 {
-  "args": {}, 
+  "args": {},
   "headers": {
-    "Accept": "*/*", 
-    "Host": "eu.httpbin.org", 
+    "Accept": "*/*",
+    "Host": "eu.httpbin.org",
     "X-Amzn-Trace-Id": "Root=1-657c6385-6cfbb92e76f346ed6f46b2b5"
-  }, 
+  },
   "url": "http://eu.httpbin.org/get"
 }
 
@@ -113,7 +113,7 @@ And with verbose mode (adding > and < to show which direction the message went):
 > Host: eu.httpbin.org
 > User-Agent: curl/8.1.2
 > Accept: */*
-> 
+>
 < HTTP/1.1 200 OK
 < Date: Fri, 15 Dec 2023 14:31:30 GMT
 < Content-Type: application/json
@@ -122,14 +122,14 @@ And with verbose mode (adding > and < to show which direction the message went):
 < Server: gunicorn/19.9.0
 < Access-Control-Allow-Origin: *
 < Access-Control-Allow-Credentials: true
-< 
+<
 {
-  "args": {}, 
+  "args": {},
   "headers": {
-    "Accept": "*/*", 
-    "Host": "eu.httpbin.org", 
+    "Accept": "*/*",
+    "Host": "eu.httpbin.org",
     "X-Amzn-Trace-Id": "Root=1-657c6342-627889715e4a2b61644a88fb"
-  }, 
+  },
   "url": "http://eu.httpbin.org/get"
 }
 
@@ -141,17 +141,17 @@ In this step your goal is to send a DELETE request to the server, this is a rela
 
     Changing the method sent to DELETE. Once done it should look like this:
 
-% cccurl -X DELETE http://eu.httpbin.org/delete 
+% cccurl -X DELETE http://eu.httpbin.org/delete
 {
-  "args": {}, 
-  "data": "", 
-  "files": {}, 
-  "form": {}, 
+  "args": {},
+  "data": "",
+  "files": {},
+  "form": {},
   "headers": {
-    "Accept": "*/*", 
-    "Host": "eu.httpbin.org", 
+    "Accept": "*/*",
+    "Host": "eu.httpbin.org",
     "X-Amzn-Trace-Id": "Root=1-657c68d7-7b7a96900d27d3a952f99f65"
-  }, 
+  },
   "json": null,
   "url": "http://eu.httpbin.org/delete"
 }
@@ -164,20 +164,20 @@ In this step your goal is to support POST in the way that it is used for most RE
 -d '{"key": "value"}' \
 -H "Content-Type: application/json"
 {
-  "args": {}, 
-  "data": "{\"key\": \"value\"}", 
-  "files": {}, 
-  "form": {}, 
+  "args": {},
+  "data": "{\"key\": \"value\"}",
+  "files": {},
+  "form": {},
   "headers": {
-    "Accept": "*/*", 
-    "Content-Length": "16", 
-    "Content-Type": "application/json", 
+    "Accept": "*/*",
+    "Content-Length": "16",
+    "Content-Type": "application/json",
     "Host": "eu.httpbin.org
     "X-Amzn-Trace-Id": "Root=1-657c69ae-6ea3b1ea7084a25843f4814c"
-  }, 
+  },
   "json": {
     "key": "value"
-  },  
+  },
   "url": "http://eu.httpbin.org/post"
 }
 
@@ -188,24 +188,24 @@ Step 5
 
 In this step your goal is to support the PUT method. Again PUT is relatively similar to POST, once done it will look something like this:
 
-% cccurl -X PUT http://eu.httpbin.org/put \  
+% cccurl -X PUT http://eu.httpbin.org/put \
 -d '{"key": "value2"}' \
 -H "Content-Type: application/json"
 {
-  "args": {}, 
-  "data": "{\"key\": \"value2\"}", 
-  "files": {}, 
-  "form": {}, 
+  "args": {},
+  "data": "{\"key\": \"value2\"}",
+  "files": {},
+  "form": {},
   "headers": {
-    "Accept": "*/*", 
-    "Content-Length": "17", 
-    "Content-Type": "application/json", 
-    "Host": "eu.httpbin.org", 
+    "Accept": "*/*",
+    "Content-Length": "17",
+    "Content-Type": "application/json",
+    "Host": "eu.httpbin.org",
     "X-Amzn-Trace-Id": "Root=1-657c6c4a-46827c2d51082eef6e1ddc9a"
-  }, 
+  },
   "json": {
     "key": "value2"
-  },  
+  },
   "url": "http://eu.httpbin.org/put"
 }
 

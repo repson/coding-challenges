@@ -15,6 +15,7 @@ Following these philosophies has made the simple unix command line tools some of
 Linux and Bash for Data Engineering
 
 You can read more about the Unix Philosophy in the excellent book The Art of Unix Programming.
+
 The Challenge - Building wc
 
 The functional requirements for wc are concisely described by it’s man page - give it a go in your local terminal now:
@@ -80,7 +81,7 @@ Step Five
 
 In this step your goal is to support the default option - i.e. no options are provided, which is the equivalent to the -c, -l and -w options. If you’ve done it right your output should match this:
 
->ccwc test.txt          
+>ccwc test.txt
     7145   58164  339292 test.txt
 
 If it doesn’t, check your code, fix any bugs and try again. If it does, congratulations! On to…
@@ -89,7 +90,7 @@ The Final Step
 
 In this step your goal is to support being able to read from standard input if no filename is specified. If you’ve done it right your output should match this:
 
->cat test.txt | ccwc -l 
+>cat test.txt | ccwc -l
     7145
 
 If it doesn’t, check your code, fix any bugs and try again. If it does, congratulations! You’ve done it, pat yourself on the back, job well done!

@@ -24,18 +24,20 @@ The course will be live on November 17th 2023. Until then it’s available at th
 The Challenge - Building Head
 
 Head is a command line tool that displays the first n lines or bytes of a file, where the user can provide the value for n. If no file or value for n is provided then it displays the first 10 lines from the standard input.
+
 Step Zero
 
 As always the first thing to do is decide on the programming language you’re going to use to tackle this challenge and set up your development environment. Then please download the following text: https://www.gutenberg.org/cache/epub/132/pg132.txt and save it as text.txt.
 
 Once that’s done proceed to Step 1.
+
 Step 1
 
 In this step your goal is to take the filename or no filename and print the contents out. Some sample test cases for this look like:
 
-% cchead test.txt 
+% cchead test.txt
 The Project Gutenberg eBook of The Art of War
-    
+
 This ebook is for the use of anyone anywhere in the United States and
 most other parts of the world at no cost and with almost no restrictions
 whatsoever. You may copy it, give it away or re-use it under the terms
@@ -69,6 +71,7 @@ line 10
 line 10
 
 Note in this second example it is reading from the standard input and each line appears twice - the first is the echo of the standard input to the screen that bash (or whatever shell you are using - BTW you can learn more about Shells and build your own shell in another Coding Challenge) does; the second is the line from our cchead. Our implementation should terminate after line 10.
+
 Step 2
 
 In this step your goal is to display only the first n lines, where n is passed to the user as a command line argument. That should look like this:
@@ -79,10 +82,11 @@ The Project Gutenberg eBook of The Art of War
 Do test with different values of n and consider what will happen if there aren’t enough lines in the file. You could test that like this:
 
 % echo "Hello, World" >> test2.txt
-% cchead -n3 test2.txt 
+% cchead -n3 test2.txt
 Hello, World
 
 Make sure your program terminates correctly.
+
 Step 3
 
 In this step your goal is to only display the first c bytes. You can test that like this:
@@ -92,21 +96,22 @@ The Project Gutenberg eBook
 
 and
 
-% cchead -c 30 test2.txt 
+% cchead -c 30 test2.txt
 Hello, World
 
 Again ensure you handle reaching the end of the file before printing the required number of characters.
+
 Step 4
 
 In this step your goal is to handle multiple files correctly. When multiple files are provided the output is presented, each file is preceded by a header consisting of the string “==> XXX <==” where “XXX” is the name of the file. That should look like this:
 
-% cchead -n 10 test2.txt test.txt 
+% cchead -n 10 test2.txt test.txt
 ==> test2.txt <==
 Hello, World
 
 ==> test.txt <==
 The Project Gutenberg eBook of The Art of War
-    
+
 This ebook is for the use of anyone anywhere in the United States and
 most other parts of the world at no cost and with almost no restrictions
 whatsoever. You may copy it, give it away or re-use it under the terms

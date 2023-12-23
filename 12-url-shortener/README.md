@@ -14,6 +14,7 @@ This is typically done with a web based user interface, that let’s users enter
 For example:
 
 The shortening service then keeps a record of the short code, i.e. bdds8utd in the example above and the long URL that it maps to. Then when a client requests the shortened URL the service returns a HTTP redirect code, sending them to the long URL.
+
 The Challenge - Building a URL Shortening Service
 
 For this challenge, if you are backend focused (like me) you could just build the REST API to create a shortened URL and redirect a request for the shortened URL to the long URL. If you’re feeling more adventurous you could build the frontend too, creating a form for users to submit a URL and get back a shortened URL.
@@ -21,9 +22,11 @@ For this challenge, if you are backend focused (like me) you could just build th
 The ultimate however would be to build both, along with some automated testing and then create a CI/CD pipeline to deploy the whole thing as a service to one of the cloud providers.
 
 If you fancy doing that don’t forget AWS offer a free tier, Azure offers a similar set of services that are free (with limits) for 12 months and Google Cloud offers 20+ free products for all customers (with limits) and $300 in free credits (at the time of writing).
+
 Step Zero
 
 In this step you decide which programming language and IDE you’re going to use and you get yourself setup with a nice new ‘urlshortener’ project. I built my backend in Rust and frontend in TypeScript using Next and React.
+
 Step 1
 
 In this step your goal is to create a REST API that will allow a client to add a URL to the list of URLs that are currently shortened.
@@ -67,6 +70,7 @@ Missing field: url
 N.B. I’ve cut out a couple of the returned headers in the example above to make it easier to read.
 
 Bonus Points: Add a check to ensure that a duplicate key that is generated from a different long URL is handled. One option might be to add a unique value to the hash input and re-hash.
+
 Step 2
 
 In this step your goal is to redirect a client request for the shortened URL. To do that you will need to return the relevant HTTP status code (I’d suggest 302 Found) and the Location header.
@@ -110,6 +114,7 @@ Here’s a very simple input screen you could build:
 Then when the URL is submitted make a call to you REST API and update the UI with the result:
 
 Ideally though, your UI/UX skills are better than mine and you build a much nicer looking UI! Bonus points for a nice button to click to copy the shortened URL!
+
 Step 4 (Optional) CI/CD
 
 In this step your goal is to create an automated integration and deployment pipeline so that every change to the codebase is automatically built, tested and deployed.
@@ -118,12 +123,15 @@ My favourite tool for a small project is GitHub Actions, but all the cloud provi
 Going Further
 
 Taking this further, you could add some form of user authentication and signup then integrate a payment solution like Stripe and you’ve built not just a real-world application, but a viable business!
+
 Past Challenges and Community
 
 Don’t forget you can find all the past challenges on the Coding Challenges website and there is a Discord Server and Coding Challenges Sub Reddit, if you want to discuss them.
+
 Share Your Solutions!
 
 If you think your solution is an example of the developers can learn from please share it, put it on GitHub, GitLab or elsewhere. Then let me know - ping me a message on the Discord Server or in the Coding Challenges Sub Reddit, via Twitter or LinkedIn or just post about it there and tag me.
+
 Request for Feedback
 
 I’m writing these challenges to help you develop your skills as a software engineer based on how I’ve approached my own personal learning and development. What works for me, might not be the best way for you - so if you have suggestions for how I can make these challenges more useful to you and others, please get in touch and let me know. All feedback greatly appreciated.
